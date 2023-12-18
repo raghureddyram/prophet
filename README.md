@@ -33,5 +33,5 @@ I also wanted to avoid the compute overhead of re-indexing the vector index at r
 
 I wanted to avoid unnecessary development costs. The open source encoder model performs relatively well locally and allowed me to avoid having to pay openai more per token for their encoder usage.
 
-Token size considerations were a big struggle. Initially I was sending too much context at a time, which kept causing issues. If the max_token_size was too little, then there wasn't usually enough context to find useful answers to most of my test questions. I settled on a token size of 1000, and top 7 nearest neighbors, just to prove the point that if at least 6000 tokens are to be sent then the program should still work, even if the max token limit is around 4000. 
+Token size considerations were a big struggle. Initially I was sending too much context at a time, which kept causing issues. If the max_token_size was too little, then there wasn't usually enough context to find useful answers to most of my test questions. I settled on a token size of 1000, and top 6 nearest neighbors, just to prove the point that if at least 6000 tokens are to be sent then the program should still work, even if the max token limit is around 4000. 
 
