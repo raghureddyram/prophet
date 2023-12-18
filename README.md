@@ -7,6 +7,10 @@ please ensure `pip3 install poetry` succeeds.
 
 `poetry install`
 
+`touch .env`
+
+(in the .env file add your api key for Open ai. should be `OPENAI_API_KEY="your_key_here"`)
+
 USAGE"
 
 `poetry run earnings-reviewer --year=2022`
