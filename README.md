@@ -22,6 +22,9 @@ or
 
 Please ask a question in a complete sentence, with proper punctuation. The program expects something like "How much revenue did Microsoft make this year?" or "Who is Satya Nadella?" or "What lines of business does Microsoft have?"
 
+![alt text](https://github.com/raghureddyram/prophet/blob/master/example.png?raw=true)
+
+
 
 --------
 HIGH LEVEL
