@@ -19,6 +19,11 @@ or
 
 `poetry run earnings-reviewer --year=2023`
 
+or
+
+`poetry run earnings-server`
+navigate to http://localhost:8000/earnings/{year}/answers?question={your_question}
+
 
 Please ask a question in a complete sentence, with proper punctuation. The program expects something like "How much revenue did Microsoft make this year?" or "Who is Satya Nadella?" or "What lines of business does Microsoft have?"
 
