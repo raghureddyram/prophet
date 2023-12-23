@@ -16,9 +16,12 @@ pdfminer-six = "^20221105"
 openai = "^1.5.0"
 python-dotenv = "^1.0.0"
 tiktoken = "^0.5.2"
+fastapi = "^0.105.0"
+uvicorn = "^0.25.0"
 
 [tool.poetry.scripts]
-earnings-reviewer = "prophet.main:start"
+earnings-reviewer = "prophet.runner:start"
+earnings-server = "prophet.main:start"
 
 
 [build-system]
