@@ -3,7 +3,6 @@ import openai
 from dotenv import load_dotenv
 import argparse
 from .models import AnswerGenerator, LoadIndex
-from fastapi import FastAPI
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -35,15 +34,4 @@ def start():
             print("Please try asking your question again with '?' at the end of the sentence.")
         else:
             answer_generator.generate_answer(question)
-
-def server():
-    app = FastAPI()
-
-
-    @app.get("/")
-    async def root():
-        return {"message": "Hello World"}
-
-
-    
 
