@@ -2,7 +2,7 @@ import os
 import openai
 from dotenv import load_dotenv
 import argparse
-from .models import PreProcessor, AnswerGenerator
+from .models import AnswerGenerator, LoadIndex
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -16,10 +16,9 @@ def start():
     load_dotenv()
     openai.api_key = os.getenv("OPENAI_API_KEY")
     os.environ["TOKENIZERS_PARALLELISM"] = "false"
-
-    pre_processor = PreProcessor(file_year=fiscal_year)
-    paragraphs = pre_processor.chunk_text()
-    encoder_model, faiss_index = pre_processor.embed()
+    
+    faiss_index, pre_processor, paragraphs  = LoadIndex(fiscal_year).load_index()
+    encoder_model = pre_processor.encoder_model
     answer_generator = AnswerGenerator(encoder_model=encoder_model, index=faiss_index, paragraphs=paragraphs)
 
     is_valid_question = True
